@@ -17,6 +17,7 @@ namespace NguyenQuocHung_B6.ViewModels
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
                 out dateTime);
+
             return isValid;
         }
     }

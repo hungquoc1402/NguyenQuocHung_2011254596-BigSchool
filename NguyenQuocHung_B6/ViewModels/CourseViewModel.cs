@@ -11,11 +11,16 @@ namespace NguyenQuocHung_B6.ViewModels
 {
     public class CourseViewModel
     {
+        public IEnumerable<Course> UpcomingCourses { get; set; }
+        public bool ShowAction { get; set; }
+
         [Required]
         public string Place { get; set; }
+
         [Required]
         [FutureDate]
         public string Date { get; set; }
+
         [Required]
         [ValidTime]
         public string Time { get; set; }

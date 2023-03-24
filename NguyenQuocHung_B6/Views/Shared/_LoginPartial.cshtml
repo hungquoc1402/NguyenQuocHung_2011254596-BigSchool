@@ -5,16 +5,18 @@
     {
     @Html.AntiForgeryToken()
 
-    <ul class="navbar-nav navbar-right">
-        
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()/a>
-            <li> <a href="#">Course I'm Going</a></li>
-            <li> <a href="#">Lecture I'm Flowing</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-        
-        
-    </ul>
+<ul class="navbar-nav navbar-right">
+
+
+    <li> <a href="#">Course I'm Going</a> </li>
+    <li><a href="@Url.Action("Attending", "Courses")"> Course I'm Going'</a></li>
+    <li> <a href="#">Lecture I'm Flowing</a></li>
+    <li role="separator" class="divider"></li>
+
+    <a href="#"  role="button" aria-haspopup="true" aria-expanded="false" style="color:mediumblue">@User.Identity.GetUserName()</a>
+    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+
+</ul>
     }
 }
 else
